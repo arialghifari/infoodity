@@ -72,5 +72,25 @@
       "city": "Malang",
       "rating": 3.9
     }
+  ],
+  "testimonials": [
+    {
+      "name": "Karin Novilduh",
+      "title": "#1 Customer",
+      "testimonial": "I start to experiencing some amazing food and restaurant with this app",
+      "picture": "https://randomuser.me/api/portraits/women/63.jpg"
+    },
+    {
+      "name": "Rocky Gerind",
+      "title": "Food Enthusiast",
+      "testimonial": "I like to try new food, this platform can easily find it for me",
+      "picture": "https://randomuser.me/api/portraits/men/72.jpg"
+    },
+    {
+      "name": "Jessica June",
+      "title": "Honest Food Reviewer",
+      "testimonial": "I give my honest review when it comes to food and this app give me some of the best recommendation",
+      "picture": "https://randomuser.me/api/portraits/women/17.jpg"
+    }
   ]
 }

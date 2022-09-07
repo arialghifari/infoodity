@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-$background-primary: #18181b;
+$bgPrimary: #18181b;
+$primary: #b67700;
+$primaryHover: #a66d00;
 $white: #e6e6e6;
+$dimWhite: #999999;
 
 * {
   box-sizing: border-box;
@@ -11,18 +14,24 @@ $white: #e6e6e6;
 }
 
 body {
-  background-color: $background-primary;
+  background-color: $bgPrimary;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 12px;
 
   nav {
     display: flex;
     gap: 24px;
-    min-height: 80px;
+    padding: 20px 0;
     align-items: center;
 
     a {
@@ -33,8 +42,60 @@ header {
   }
 }
 
-.container {
-  max-width: 1200px;
+.hero {
+  background: url('../public/hero-image.jpg') center no-repeat;
+  background-size: cover;
+  width: 100%;
+  color: $white;
   margin: auto;
-  padding: 0 12px;
+  padding: 100px 0;
+
+  @media (min-width: 1200px) {
+    padding-left: 60px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+
+    p.hero__logo {
+      color: $primary;
+      letter-spacing: 4px;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    h2.hero__title {
+      font-weight: 500;
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    p.hero__subtitle {
+      color: $dimWhite;
+      font-size: 20px;
+      margin-bottom: 44px;
+      line-height: 135%;
+    }
+
+    button.hero__button {
+      font-size: 16px;
+      width: fit-content;
+      padding: 16px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      background-color: $primary;
+      border: none;
+
+      &:hover {
+        background-color: $primaryHover;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1000px;
+  }
 }

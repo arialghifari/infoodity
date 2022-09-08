@@ -4,18 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="../public/logo.svg"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="../public/logo.svg" type="image/x-icon" />
     <title>Infoodity</title>
   </head>
   <body>
     <header class="container">
-      <div class="logo">
+      <a href="index.html" class="header__logo">
         <img src="../public/logo.svg" alt="Infoodity logo" />
-      </div>
+      </a>
       <nav>
         <a href="index.html">Home</a>
         <a href="#">Favorite</a>
@@ -23,19 +19,88 @@
       </nav>
     </header>
 
-    <div class="hero">
-      <div class="container">
-        <p class="hero__logo">INFOONITY</p>
-        <h2 class="hero__title">
+    <section class="hero">
+      <section class="hero__wrapper container">
+        <h1 class="hero__logo">INFOODITY</h1>
+        <p class="hero__title">
           Favorite restaurant <br />
           list for you
-        </h2>
+        </p>
         <p class="hero__subtitle">
-          Start experiencing something that you have never <br />
-          experienced before
+          Start experiencing something that you <br />
+          have never experienced before
         </p>
         <button class="hero__button">Start Explore</button>
-      </div>
-    </div>
+      </section>
+    </section>
+
+    <main class="container">
+      <section class="explore">
+        <h2 class="explore__title">Explore Restaurant</h2>
+        <p class="explore__subtitle">Sometimes first sight is promising</p>
+
+        <section class="explore__list">
+          <section class="explore__card">
+            <img
+              src="https://restaurant-api.dicoding.dev/images/medium/41"
+              alt="Bring Your Phone Cafe image"
+            />
+
+            <section class="explore__card__info">
+              <section>
+                <img src="../public/ic-map-pin.svg" alt="Map pin icon" />
+                <p>Medan</p>
+              </section>
+              <section>
+                <img src="../public/ic-star.svg" alt="Star icon" />
+                <p>4.6</p>
+              </section>
+            </section>
+
+            <section class="explore__card__body">
+              <h3>Bring Your Phone Cafe</h3>
+              <p>
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system...
+              </p>
+              <button>
+                <p>View More</p>
+                <img src="../public/ic-arrow-up-right.svg" alt="Arrow icon" />
+              </button>
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <section class="testimonials">
+        <h2 class="testimonials__title">Testimonials</h2>
+        <p class="testimonials__subtitle">What they say about this platform</p>
+
+        <section class="testimonials__list">
+          <section class="testimonials__card">
+            <p>
+              I start to experiencing some amazing food and restaurant with this
+              app
+            </p>
+
+            <section class="testimonials__card__user">
+              <img
+                src="https://randomuser.me/api/portraits/women/63.jpg"
+                alt="Karin Novilduh picture"
+              />
+              <section>
+                <p>Karin Novilduh</p>
+                <p>#1 Customer</p>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      © 2022 Infoodity. Made with ❤ by Ari Alghifari. All rights reserved.
+    </footer>
   </body>
 </html>

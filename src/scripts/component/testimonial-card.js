@@ -10,7 +10,7 @@ class TestimonialCard extends HTMLElement {
 			<section class="testimonials__card__user">
 				<img
 					src="${testimonial.picture}"
-					alt="${testimonial.name} picture"
+					alt="${testimonial.name}"
 				/>
 				<section>
 					<p>${testimonial.name}</p>

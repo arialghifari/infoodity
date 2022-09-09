@@ -29,7 +29,7 @@ class RestaurantCard extends HTMLElement {
 			<section class="restaurant__card__body">
 				<section>
 					<h3>${restaurant.name}</h3>
-					<p>${restaurant.description.split('', 150).join('')}...</p>
+					<p>${restaurant.description}...</p>
 				</section>
 				<a href="#" aria-label="View more ${restaurant.name}">
 					<p>View More</p>

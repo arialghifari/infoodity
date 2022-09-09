@@ -113,28 +113,29 @@ header {
   }
 }
 
-.explore {
+.restaurant {
   color: $white;
 
-  .explore__title {
+  .restaurant__title {
     margin-top: 52px;
     font-weight: 500;
   }
 
-  .explore__subtitle {
+  .restaurant__subtitle {
     color: $dimWhite;
     margin-top: 8px;
   }
 
-  .explore__list {
+  restaurant-list {
     margin: 32px 0 0 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 
-    .explore__card {
+    restaurant-card {
       background-color: $bgCard;
       border-radius: 4px;
+      height: 100%;
 
       & > img {
         width: 100%;
@@ -144,7 +145,7 @@ header {
         border-radius: 4px 4px 0 0;
       }
 
-      .explore__card__info {
+      .restaurant__card__info {
         display: flex;
         justify-content: space-between;
         padding: 12px 20px;
@@ -161,29 +162,30 @@ header {
         }
       }
 
-      .explore__card__body {
+      .restaurant__card__body {
         padding: 24px 20px 16px 20px;
+        position: relative;
 
-        h3 {
-          line-height: 145%;
-        }
+        & > section {
+          h3 {
+            line-height: 145%;
+          }
 
-        & > p {
-          font-weight: 300;
-          line-height: 155%;
-          font-size: 14px;
-          padding: 20px 0 12px 0;
+          & > p {
+            font-weight: 300;
+            line-height: 155%;
+            font-size: 14px;
+            padding: 20px 0 12px 0;
+          }
         }
 
         button {
           display: flex;
-          justify-content: center;
           align-items: center;
           background-color: transparent;
           border: none;
           color: $primary;
           cursor: pointer;
-          gap: 4px;
 
           p {
             line-height: 135%;
@@ -213,13 +215,13 @@ header {
     margin-top: 8px;
   }
 
-  .testimonials__list {
+  testimonial-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin: 32px 0;
 
-    .testimonials__card {
+    testimonial-card {
       background-color: $bgCard;
       border-radius: 4px;
       padding: 20px;

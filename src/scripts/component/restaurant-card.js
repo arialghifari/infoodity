@@ -31,10 +31,10 @@ class RestaurantCard extends HTMLElement {
 					<h3>${restaurant.name}</h3>
 					<p>${restaurant.description.split('', 150).join('')}...</p>
 				</section>
-				<button aria-label="View more ${restaurant.name}">
+				<a href="#" aria-label="View more ${restaurant.name}">
 					<p>View More</p>
 					<img src="${icArrow}" alt="Arrow icon" />
-				</button>
+				</a>
 			</section>
 		`;
   }

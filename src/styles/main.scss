@@ -215,13 +215,15 @@ header {
           }
         }
 
-        button {
+        & > a {
           display: flex;
           align-items: center;
           background-color: transparent;
           border: none;
           color: $primary;
           cursor: pointer;
+          text-decoration: none;
+          width: fit-content;
 
           p {
             line-height: 135%;

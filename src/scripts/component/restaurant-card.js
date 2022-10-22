@@ -1,4 +1,3 @@
-import './restaurant-card';
 import CONFIG from '../globals/config';
 
 class RestaurantCard extends HTMLElement {
@@ -10,7 +9,7 @@ class RestaurantCard extends HTMLElement {
     this.innerHTML = `
 			<img
 				src="${CONFIG.BASE_IMAGE_URL}/${restaurant.pictureId}"
-				alt="${restaurant.name} image"
+				alt="${restaurant.name}"
 			/>
 
 			<section class="restaurant__card__info">

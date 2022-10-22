@@ -1,10 +1,14 @@
-import 'regenerator-runtime'; /* for async await transpile */
-import html from '../templates/index.html';
+import 'regenerator-runtime';
 import '../styles/main.scss';
-import main from './main.js';
-import './component/restaurant-list.js';
-import './component/restaurant-card.js';
-import './component/testimonial-list.js';
-import './component/testimonial-card.js';
+import App from './views/app';
+import swRegister from './utils/sw-register';
 
-document.addEventListener('DOMContentLoaded', main);
+const app = new App({
+  button: document.querySelector('.hamburger'),
+  drawer: document.querySelector('.drawer'),
+  content: document.body,
+});
+
+window.addEventListener('load', async () => {
+  await swRegister();
+});

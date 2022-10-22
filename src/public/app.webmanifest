@@ -1,0 +1,18 @@
+{
+  "id": "infoodity-pwa",
+  "start_url": "./index.html",
+  "name": "Infoodity",
+  "short_name": "Infoodity",
+  "description": "Your favorite restaurant list",
+  "display": "standalone",
+  "background_color": "#18181B",
+  "theme_color": "#18181B",
+  "icons": [
+    {
+      "src": "./logo.svg",
+      "sizes": "72x72",
+      "type": "image/svg",
+      "purpose": "any"
+    }
+  ]
+}

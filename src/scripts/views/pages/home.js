@@ -10,8 +10,8 @@ const Home = {
         <section class="hero__wrapper container">
           <h1 class="hero__logo">INFOODITY</h1>
           <p class="hero__title">
-            Favorite restaurant <br />
-            list for you
+            Your favorite <br />
+            restaurant list
           </p>
           <p class="hero__subtitle">
             Start experiencing something that you <br />
@@ -40,26 +40,28 @@ const Home = {
   },
 
   async afterRender() {
-    const restaurants = await InfooditySource.restaurants();
+    const { error, message, restaurants } = await InfooditySource.restaurants();
     const testimonials = data.testimonials;
-    const restaurantsEl = document.getElementById('restaurant-list');
-    const testimonialsEl = document.getElementById('testimonial-list');
+    const restaurantListEl = document.getElementById('restaurant-list');
+    const testimonialListEl = document.getElementById('testimonial-list');
 
-    if (restaurants) {
-      restaurantsEl.innerHTML = '';
+    if (!error) {
+      restaurantListEl.innerHTML = '';
       restaurants.forEach((restaurant) => {
         const restaurantCard = document.createElement('restaurant-card');
         restaurantCard.restaurant = restaurant;
 
-        restaurantsEl.appendChild(restaurantCard);
+        restaurantListEl.appendChild(restaurantCard);
       });
+    } else {
+      restaurantListEl.innerHTML = `<p>${message}</p>`;
     }
 
     testimonials.forEach((testimonial) => {
       const testimonialCard = document.createElement('testimonial-card');
       testimonialCard.testimonial = testimonial;
 
-      testimonialsEl.appendChild(testimonialCard);
+      testimonialListEl.appendChild(testimonialCard);
     });
   },
 };

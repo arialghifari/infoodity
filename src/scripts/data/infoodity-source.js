@@ -4,7 +4,7 @@ class InfooditySource {
   static async restaurants() {
     const response = await fetch(API_ENDPOINT.LIST);
     const responseJson = await response.json();
-    return responseJson.restaurants;
+    return responseJson;
   }
 }
 

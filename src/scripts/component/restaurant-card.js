@@ -1,7 +1,4 @@
 import './restaurant-card';
-import icMapPin from '../../public/ic-map-pin.svg';
-import icStar from '../../public/ic-star.svg';
-import icArrow from '../../public/ic-arrow-up-right.svg';
 import CONFIG from '../globals/config';
 
 class RestaurantCard extends HTMLElement {
@@ -18,11 +15,11 @@ class RestaurantCard extends HTMLElement {
 
 			<section class="restaurant__card__info">
 				<section>
-					<img src="${icMapPin}" alt="Map pin icon" />
+					<img src="./ic-map-pin.svg" alt="Map pin icon" />
 					<p>${restaurant.city}</p>
 				</section>
 				<section>
-					<img src="${icStar}" alt="Star icon" />
+					<img src="./ic-star.svg" alt="Star icon" />
 					<p>${restaurant.rating}</p>
 				</section>
 			</section>
@@ -34,7 +31,7 @@ class RestaurantCard extends HTMLElement {
 				</section>
 				<a href="/#/detail/${restaurant.id}" aria-label="View Detail ${restaurant.name}">
 					<p>View Detail</p>
-					<img src="${icArrow}" alt="Arrow icon" />
+					<img src="./ic-arrow-up-right.svg" alt="Arrow icon" />
 				</a>
 			</section>
 		`;

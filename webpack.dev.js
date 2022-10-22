@@ -20,3 +20,4 @@ module.exports = merge(common, {
   },
   plugins: [new CleanWebpackPlugin()],
 });
+

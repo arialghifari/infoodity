@@ -6,9 +6,14 @@ import swRegister from './utils/sw-register';
 const app = new App({
   button: document.querySelector('.hamburger'),
   drawer: document.querySelector('.drawer'),
-  content: document.body,
+  content: document.querySelector('#main'),
+});
+
+window.addEventListener('hashchange', () => {
+  app.renderPage();
 });
 
 window.addEventListener('load', async () => {
   await swRegister();
+  app.renderPage();
 });

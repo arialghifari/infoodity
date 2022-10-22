@@ -2,6 +2,7 @@ import './restaurant-card';
 import icMapPin from '../../public/ic-map-pin.svg';
 import icStar from '../../public/ic-star.svg';
 import icArrow from '../../public/ic-arrow-up-right.svg';
+import CONFIG from '../globals/config';
 
 class RestaurantCard extends HTMLElement {
   set restaurant(restaurant) {
@@ -11,7 +12,7 @@ class RestaurantCard extends HTMLElement {
   render(restaurant) {
     this.innerHTML = `
 			<img
-				src="${restaurant.pictureId}"
+				src="${CONFIG.BASE_IMAGE_URL}/${restaurant.pictureId}"
 				alt="${restaurant.name} image"
 			/>
 
@@ -31,8 +32,8 @@ class RestaurantCard extends HTMLElement {
 					<h3>${restaurant.name}</h3>
 					<p>${restaurant.description}...</p>
 				</section>
-				<a href="#" aria-label="View more ${restaurant.name}">
-					<p>View More</p>
+				<a href="/#/detail/${restaurant.id}" aria-label="View Detail ${restaurant.name}">
+					<p>View Detail</p>
 					<img src="${icArrow}" alt="Arrow icon" />
 				</a>
 			</section>

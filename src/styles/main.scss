@@ -144,6 +144,7 @@ header {
       border: none;
       margin-top: 32px;
       font-weight: 500;
+      color: #000;
 
       &:hover {
         background-color: $primaryHover;
@@ -155,7 +156,7 @@ header {
 .restaurant {
   color: $white;
 
-  .restaurant__title {
+  #restaurant__title {
     margin-top: 52px;
     font-weight: 500;
   }
@@ -165,7 +166,7 @@ header {
     margin-top: 8px;
   }
 
-  restaurant-list {
+  #restaurant-list {
     margin: 32px 0 0 0;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -263,7 +264,7 @@ header {
     margin-top: 8px;
   }
 
-  testimonial-list {
+  #testimonial-list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
@@ -329,8 +330,8 @@ footer {
 }
 
 @media (min-width: 600px) {
-  .restaurant restaurant-list,
-  .testimonials testimonial-list {
+  .restaurant #restaurant-list,
+  .testimonials #testimonial-list {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -354,15 +355,15 @@ footer {
 }
 
 @media (min-width: 900px) {
-  .restaurant restaurant-list,
-  .testimonials testimonial-list {
+  .restaurant #restaurant-list,
+  .testimonials #testimonial-list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (min-width: 1000px) {
-  .restaurant restaurant-list,
-  .testimonials testimonial-list {
+  .restaurant #restaurant-list,
+  .testimonials #testimonial-list {
     grid-template-columns: repeat(3, 1fr);
   }
 }

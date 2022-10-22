@@ -1,3 +1,8 @@
+import InfooditySource from '../../data/infoodity-source';
+import '../../component/restaurant-card';
+import '../../component/testimonial-card';
+import data from '../../../DATA.json';
+
 const Home = {
   async render() {
     return `
@@ -12,27 +17,51 @@ const Home = {
             Start experiencing something that you <br />
             have never experienced before
           </p>
-          <button class="hero__button">Start Explore</button>
+          <a class="hero__button">Start Explore</a>
         </section>
       </section>
 
       <section class="restaurant">
-        <h2 class="restaurant__title">Explore Restaurant</h2>
+        <h2 id="restaurant__title">Explore Restaurant</h2>
         <p class="restaurant__subtitle">Sometimes first sight is promising</p>
 
-        <restaurant-list></restaurant-list>
+        <div id="restaurant-list">
+          <p>Loading...</p>
+        </div>
       </section>
 
       <section class="testimonials">
         <h2 class="testimonials__title">Testimonials</h2>
         <p class="testimonials__subtitle">What they say about this platform</p>
 
-        <testimonial-list></testimonial-list>
+        <div id="testimonial-list"></div>
       </section>
   `;
   },
 
-  async afterRender() {},
+  async afterRender() {
+    const restaurants = await InfooditySource.restaurants();
+    const testimonials = data.testimonials;
+    const restaurantsEl = document.getElementById('restaurant-list');
+    const testimonialsEl = document.getElementById('testimonial-list');
+
+    if (restaurants) {
+      restaurantsEl.innerHTML = '';
+      restaurants.forEach((restaurant) => {
+        const restaurantCard = document.createElement('restaurant-card');
+        restaurantCard.restaurant = restaurant;
+
+        restaurantsEl.appendChild(restaurantCard);
+      });
+    }
+
+    testimonials.forEach((testimonial) => {
+      const testimonialCard = document.createElement('testimonial-card');
+      testimonialCard.testimonial = testimonial;
+
+      testimonialsEl.appendChild(testimonialCard);
+    });
+  },
 };
 
 export default Home;

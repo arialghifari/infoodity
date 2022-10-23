@@ -8,10 +8,15 @@ class InfooditySource {
   }
 
   static async detailRestaurant(id) {
-      const response = await fetch(API_ENDPOINT.DETAIL(id));
-      const responseJson = await response.json();
-      console.log(responseJson);
-      return responseJson;
+    const response = await fetch(API_ENDPOINT.DETAIL(id));
+    const responseJson = await response.json();
+    return responseJson;
+  }
+
+  static async searchRestaurant(query) {
+    const response = await fetch(API_ENDPOINT.SEARCH(query));
+    const responseJson = await response.json();
+    return responseJson;
   }
 }
 

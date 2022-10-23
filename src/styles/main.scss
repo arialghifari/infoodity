@@ -66,6 +66,14 @@ header {
           color: $primary;
         }
       }
+
+      form input {
+        padding: 8px;
+        background-color: transparent;
+        border: 1px solid $dimWhite;
+        border-radius: 4px;
+        color: $white;
+      }
     }
 
     .open {
@@ -476,6 +484,7 @@ footer {
         position: initial;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         padding: 0;
         transform: translateX(0);
       }

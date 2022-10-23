@@ -14,20 +14,20 @@ const Detail = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const detailEl = document.getElementById('detail');
+    const detailContainer = document.getElementById('detail');
 
     const { error, message, restaurant } =
       await InfooditySource.detailRestaurant(url.id);
 
     if (!error) {
-      detailEl.innerHTML = '';
+      detailContainer.innerHTML = '';
 
       const detailCard = document.createElement('detail-card');
       detailCard.restaurant = restaurant;
 
-      detailEl.appendChild(detailCard);
+      detailContainer.appendChild(detailCard);
     } else {
-      detailEl.innerHTML = `<p class='message'>${message}</p>`;
+      detailContainer.innerHTML = `<p class='message'>${message}</p>`;
     }
 
     LikeButtonInitiator.init({

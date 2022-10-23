@@ -1,12 +1,14 @@
 import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
+import SearchInitiator from '../utils/search-initiator';
 
 class App {
-  constructor({ button, drawer, content }) {
+  constructor({ button, drawer, content, searchForm }) {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
+    this._searchForm = searchForm;
 
     this._initialAppShell();
   }
@@ -17,6 +19,8 @@ class App {
       drawer: this._drawer,
       content: this._content,
     });
+
+    SearchInitiator.init({ form: this._searchForm });
   }
 
   async renderPage() {

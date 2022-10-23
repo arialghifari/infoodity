@@ -7,6 +7,7 @@ const app = new App({
   button: document.querySelector('.hamburger'),
   drawer: document.querySelector('.drawer'),
   content: document.querySelector('#main'),
+  searchForm: document.querySelector('#searchForm'),
 });
 
 window.addEventListener('hashchange', () => {

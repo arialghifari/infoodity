@@ -1,6 +1,7 @@
-import FavoriteMovieIdb from '../../data/favorite-restaurant-idb';
+import InfooditySource from '../../data/infoodity-source';
+import UrlParser from '../../routes/url-parser';
 
-const Favorite = {
+const Search = {
   async render() {
     return `
       <section class="restaurant">
@@ -12,11 +13,14 @@ const Favorite = {
   },
 
   async afterRender() {
-    const restaurants = await FavoriteMovieIdb.getAllRestaurant();
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurantContainer = document.querySelector('.restaurant');
     const restaurantListContainer = document.querySelector('#restaurant-list');
 
-    if (restaurants.length > 0) {
+    const { error, founded, restaurants } =
+      await InfooditySource.searchRestaurant(url.id);
+
+    if (founded > 0 && !error) {
       restaurantListContainer.innerHTML = '';
       restaurants.forEach((restaurant) => {
         const restaurantCard = document.createElement('restaurant-card');
@@ -26,10 +30,10 @@ const Favorite = {
       });
     } else {
       restaurantContainer.innerHTML = `
-        <p class='message'>You don't have favorite restaurant</p>
+        <p class='message'>No restaurant found</p>
       `;
     }
   },
 };
 
-export default Favorite;
+export default Search;

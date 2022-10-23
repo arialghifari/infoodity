@@ -18,6 +18,18 @@ class InfooditySource {
     const responseJson = await response.json();
     return responseJson;
   }
+
+  static async addReview(body) {
+    const response = await fetch(API_ENDPOINT.REVIEW, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    });
+    const responseJson = await response.json();
+    return responseJson;
+  }
 }
 
 export default InfooditySource;

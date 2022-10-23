@@ -17,7 +17,7 @@ const Home = {
             Start experiencing something that you <br />
             have never experienced before
           </p>
-          <a class="hero__button">Start Explore</a>
+          <a href="#restaurant__title" class="hero__button">Start Explore</a>
         </section>
       </section>
 

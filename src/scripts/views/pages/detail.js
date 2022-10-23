@@ -2,6 +2,8 @@ import InfooditySource from '../../data/infoodity-source';
 import '../../component/detail-card';
 import UrlParser from '../../routes/url-parser';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
+import ReviewInitiator from '../../utils/review-initiator';
+import '../../component/detail-card';
 
 const Detail = {
   async render() {
@@ -33,6 +35,10 @@ const Detail = {
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       restaurant,
+    });
+
+    await ReviewInitiator.init({
+      form: document.querySelector('#reviewForm'),
     });
   },
 };

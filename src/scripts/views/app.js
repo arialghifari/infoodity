@@ -2,13 +2,15 @@ import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 import SearchInitiator from '../utils/search-initiator';
+import ReviewInitiator from '../utils/review-initiator';
 
 class App {
-  constructor({ button, drawer, content, searchForm }) {
+  constructor({ button, drawer, content, searchForm, reviewForm }) {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
     this._searchForm = searchForm;
+    this._reviewForm = reviewForm;
 
     this._initialAppShell();
   }
@@ -19,8 +21,8 @@ class App {
       drawer: this._drawer,
       content: this._content,
     });
-
     SearchInitiator.init({ form: this._searchForm });
+    ReviewInitiator.init({ form: this._reviewForm });
   }
 
   async renderPage() {

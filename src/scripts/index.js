@@ -8,6 +8,7 @@ const app = new App({
   drawer: document.querySelector('.drawer'),
   content: document.querySelector('#main'),
   searchForm: document.querySelector('#searchForm'),
+  reviewForm: document.querySelector('#reviewForm'),
 });
 
 window.addEventListener('hashchange', () => {

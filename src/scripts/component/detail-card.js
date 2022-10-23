@@ -55,6 +55,31 @@ class DetailCard extends HTMLElement {
 					</ul>
 				</div>
 			</div>
+
+			<hr />
+
+			<div class="reviews">
+				<form id="reviewForm">
+					<input type="hidden" name="id" value="${restaurant.id}" required />
+					<input type="text" name="name" placeholder="Name" required />
+					<textarea name="review" cols="10" rows="5" placeholder="Write review" required></textarea>
+					<button>COMMENT</button>
+				</form>
+
+				<div id="review-container">
+					${restaurant.customerReviews
+            ?.map((review) => {
+              return `
+							<div class="review">
+								<p class="name">${review.name}</p>
+								<p class="date">${review.date}</p>
+								<p class="text">${review.review}</p>
+							</div>
+						`;
+            })
+            .join('')}
+				</div>
+			</div>
 		`;
   }
 }

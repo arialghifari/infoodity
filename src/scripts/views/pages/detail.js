@@ -1,9 +1,9 @@
 import InfooditySource from '../../data/infoodity-source';
-import '../../component/detail-card';
 import UrlParser from '../../routes/url-parser';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import ReviewInitiator from '../../utils/review-initiator';
 import '../../component/detail-card';
+import '../../component/review-card';
 
 const Detail = {
   async render() {
@@ -16,18 +16,24 @@ const Detail = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const detailContainer = document.getElementById('detail');
 
     const { error, message, restaurant } =
       await InfooditySource.detailRestaurant(url.id);
 
     if (!error) {
+      const detailContainer = document.getElementById('detail');
       detailContainer.innerHTML = '';
 
       const detailCard = document.createElement('detail-card');
       detailCard.restaurant = restaurant;
-
       detailContainer.appendChild(detailCard);
+
+      const reviewContainer = document.getElementById('review-container');
+      restaurant.customerReviews.map((review) => {
+        const reviewCard = document.createElement('review-card');
+        reviewCard.review = review;
+        reviewContainer.appendChild(reviewCard);
+      });
     } else {
       detailContainer.innerHTML = `<p class='message'>${message}</p>`;
     }

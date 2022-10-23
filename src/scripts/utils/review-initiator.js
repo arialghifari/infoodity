@@ -1,4 +1,5 @@
 import InfooditySource from '../data/infoodity-source';
+import '../component/review-card';
 
 const ReviewInitiator = {
   async init({ form }) {
@@ -22,17 +23,11 @@ const ReviewInitiator = {
     const reviewContainer = document.getElementById('review-container');
     reviewContainer.innerHTML = '';
 
-    await customerReviews
-      .map((review) => {
-        return (reviewContainer.innerHTML += `
-        <div class="review">
-          <p class="name">${review.name}</p>
-          <p class="date">${review.date}</p>
-          <p class="text">${review.review}</p>
-        </div>
-      `);
-      })
-      .join('');
+    customerReviews.map((review) => {
+      const reviewCard = document.createElement('review-card');
+      reviewCard.review = review;
+      reviewContainer.appendChild(reviewCard);
+    });
   },
 };
 

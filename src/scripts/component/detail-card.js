@@ -12,17 +12,19 @@ class DetailCard extends HTMLElement {
 				alt="${restaurant.name}"
 			/>
 
-			<div class="flex">
+			<div class="header">
 				<p class="title">${restaurant.name}</p>
-				<button aria-label="like this movie" id="likeButton" class="like">
-					<i class="fa fa-heart-o" aria-hidden="true"></i>
-				</button>
+				<div id="likeButtonContainer"></div>
+			</div>
+
+			<div class="categories">
+				${restaurant.categories.map((category) => `<p>${category.name}</p>`).join('')}
 			</div>
 
 			<div class="info">
 				<div>
 					<img src="./ic-map-pin.svg" alt="Map pin icon" />
-					<p>${restaurant.city}</p>
+					<p>${restaurant.address}, ${restaurant.city}</p>
 				</div>
 				<div>
 					<img src="./ic-star.svg" alt="Star icon" />
@@ -35,6 +37,24 @@ class DetailCard extends HTMLElement {
 			<p class="description">
 				${restaurant.description}
 			</p>
+
+			<div class="foods-container">
+				<div class="foods">
+					<p>Foods</p>
+
+					<ul class="food">
+						${restaurant.menus.foods.map((food) => `<li>${food.name}</li>`).join('')}
+					</ul>
+				</div>
+
+				<div class="foods">
+					<p>Drinks</p>
+
+					<ul class="drink">
+						${restaurant.menus.drinks.map((drinks) => `<li>${drinks.name}</li>`).join('')}
+					</ul>
+				</div>
+			</div>
 		`;
   }
 }

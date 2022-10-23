@@ -42,26 +42,26 @@ const Home = {
   async afterRender() {
     const { error, message, restaurants } = await InfooditySource.restaurants();
     const testimonials = data.testimonials;
-    const restaurantListEl = document.getElementById('restaurant-list');
-    const testimonialListEl = document.getElementById('testimonial-list');
+    const restaurantListContainer = document.getElementById('restaurant-list');
+    const testimonialListContainer = document.getElementById('testimonial-list');
 
     if (!error) {
-      restaurantListEl.innerHTML = '';
+      restaurantListContainer.innerHTML = '';
       restaurants.forEach((restaurant) => {
         const restaurantCard = document.createElement('restaurant-card');
         restaurantCard.restaurant = restaurant;
 
-        restaurantListEl.appendChild(restaurantCard);
+        restaurantListContainer.appendChild(restaurantCard);
       });
     } else {
-      restaurantListEl.innerHTML = `<p>${message}</p>`;
+      restaurantListContainer.innerHTML = `<p class='message'>${message}</p>`;
     }
 
     testimonials.forEach((testimonial) => {
       const testimonialCard = document.createElement('testimonial-card');
       testimonialCard.testimonial = testimonial;
 
-      testimonialListEl.appendChild(testimonialCard);
+      testimonialListContainer.appendChild(testimonialCard);
     });
   },
 };

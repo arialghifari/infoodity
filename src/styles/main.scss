@@ -26,10 +26,6 @@ header {
 
   .header__logo {
     display: flex;
-
-    img {
-      padding: 8px;
-    }
   }
 
   nav {
@@ -42,14 +38,16 @@ header {
     .hamburger {
       font-size: 28px;
       text-decoration: none;
-      padding: 8px 14px;
       color: $white;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
     }
 
     .drawer {
       position: absolute;
       right: 0;
-      top: 80px;
+      top: 76px;
       background-color: $bgPrimary;
       width: 100%;
       text-align: center;
@@ -342,12 +340,12 @@ header {
     font-size: 1.2rem;
   }
 
-  .flex {
+  .header {
     display: flex;
     gap: 4px;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0 16px 0;
+    padding: 20px 0 12px 0;
   }
 
   button {
@@ -387,6 +385,56 @@ header {
     border-bottom: 1px solid $primaryHover;
     margin: 20px 0;
   }
+
+  .categories {
+    color: $dimWhite;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 12px 0;
+    gap: 4px;
+
+    p {
+      font-size: 0.9rem;
+      border: 1px solid $dimWhite;
+      padding: 4px 12px;
+      border-radius: 4px;
+      width: fit-content;
+    }
+  }
+
+  .foods-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 20px 0;
+
+    .foods {
+      color: $white;
+      margin-bottom: 20px;
+
+      p {
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          margin-bottom: 4px;
+        }
+      }
+
+      ul.food li:before {
+        content: '🍴';
+        margin-right: 8px;
+      }
+
+      ul.drink li:before {
+        content: '🥛';
+        margin-right: 8px;
+      }
+    }
+  }
 }
 
 footer {
@@ -394,6 +442,20 @@ footer {
   margin-top: 52px;
   color: $dimWhite;
   padding: 24px 0;
+}
+
+.padding {
+  padding: 0 12px;
+}
+
+.text-center {
+  text-align: center;
+  color: $white;
+}
+
+.message {
+  text-align: center;
+  color: $white;
 }
 
 @media (min-width: 600px) {
@@ -421,8 +483,8 @@ footer {
   }
 
   #detail {
-    .flex {
-      padding: 20px 20px 16px 20px;
+    .header {
+      padding: 20px 20px 12px 20px;
     }
 
     .info {
@@ -438,12 +500,17 @@ footer {
     hr {
       margin: 20px;
     }
-  }
-}
 
-.text-center {
-  text-align: center;
-  color: $white;
+    .categories {
+      flex-direction: row;
+      margin: 0 20px 12px 20px;
+    }
+
+    .foods-container {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 20px 20px;
+    }
+  }
 }
 
 @media (min-width: 900px) {

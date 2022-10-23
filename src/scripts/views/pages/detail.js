@@ -1,6 +1,7 @@
 import InfooditySource from '../../data/infoodity-source';
 import '../../component/detail-card';
 import UrlParser from '../../routes/url-parser';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
   async render() {
@@ -26,8 +27,13 @@ const Detail = {
 
       detailEl.appendChild(detailCard);
     } else {
-      detailEl.innerHTML = `<p>${message}</p>`;
+      detailEl.innerHTML = `<p class='message'>${message}</p>`;
     }
+
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      restaurant,
+    });
   },
 };
 

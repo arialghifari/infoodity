@@ -28,4 +28,9 @@ module.exports = merge(common, {
       swDest: './sw.bundle.js',
     }),
   ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
 });

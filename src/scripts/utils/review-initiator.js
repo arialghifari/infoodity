@@ -26,7 +26,7 @@ const ReviewInitiator = {
     customerReviews.map((review) => {
       const reviewCard = document.createElement('review-card');
       reviewCard.review = review;
-      reviewContainer.appendChild(reviewCard);
+      return reviewContainer.appendChild(reviewCard);
     });
   },
 };

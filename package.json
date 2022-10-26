@@ -49,6 +49,7 @@
   "dependencies": {
     "idb": "^7.1.0",
     "regenerator-runtime": "^0.13.10",
+    "workbox-precaching": "^6.5.4",
     "workbox-window": "^6.5.4"
   }
 }

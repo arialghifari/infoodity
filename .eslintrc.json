@@ -16,6 +16,12 @@
     "linebreak-style": ["error", "windows"],
     "quotes": ["error", "single"],
     "eslint-env": 0,
-    "no-underscore-dangle": [{ "allow": ["foo_", "_bar"] }]
+    "no-underscore-dangle": "off",
+    "no-restricted-globals": "off",
+    "object-curly-newline": "off",
+    "operator-linebreak": "off",
+    "func-names": "off",
+    "no-tabs": "off",
+    "no-undef": "off"
   }
 }

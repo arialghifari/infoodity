@@ -41,7 +41,6 @@ const Home = {
 
   async afterRender() {
     const { error, message, restaurants } = await InfooditySource.restaurants();
-    const testimonials = data.testimonials;
     const restaurantListContainer = document.getElementById('restaurant-list');
     const testimonialListContainer = document.getElementById('testimonial-list');
 
@@ -57,7 +56,7 @@ const Home = {
       restaurantListContainer.innerHTML = `<p class='message'>${message}</p>`;
     }
 
-    testimonials.forEach((testimonial) => {
+    data.testimonials.forEach((testimonial) => {
       const testimonialCard = document.createElement('testimonial-card');
       testimonialCard.testimonial = testimonial;
 

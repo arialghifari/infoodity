@@ -17,11 +17,11 @@ const Detail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
 
+    const detailContainer = document.getElementById('detail');
     const { error, message, restaurant } =
       await InfooditySource.detailRestaurant(url.id);
 
     if (!error) {
-      const detailContainer = document.getElementById('detail');
       detailContainer.innerHTML = '';
 
       const detailCard = document.createElement('detail-card');
@@ -32,7 +32,7 @@ const Detail = {
       restaurant.customerReviews.map((review) => {
         const reviewCard = document.createElement('review-card');
         reviewCard.review = review;
-        reviewContainer.appendChild(reviewCard);
+        return reviewContainer.appendChild(reviewCard);
       });
     } else {
       detailContainer.innerHTML = `<p class='message'>${message}</p>`;

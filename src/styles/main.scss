@@ -32,26 +32,20 @@ header {
   }
 
   nav {
-    display: flex;
-    gap: 12px;
-    padding: 20px 0;
-    align-items: center;
-    justify-content: flex-end;
-
     .hamburger {
-      font-size: 28px;
+      font-size: 1rem;
       text-decoration: none;
       color: $white;
       background-color: transparent;
       border: none;
       cursor: pointer;
-      padding: 8px 12px;
+      padding: 16px;
     }
 
     .drawer {
       position: absolute;
       right: 0;
-      top: 90px;
+      top: 76px;
       background-color: $bgPrimary;
       width: 100%;
       text-align: center;
@@ -93,6 +87,10 @@ header {
   }
 }
 
+.padding {
+  padding: 20px 12px;
+}
+
 .mb {
   margin-bottom: 54px;
 }
@@ -119,7 +117,7 @@ header {
   border-radius: 4px;
   text-underline-offset: 2px;
   z-index: 100;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .skip__link:focus {
@@ -132,7 +130,8 @@ header {
 }
 
 .hero {
-  background: url('../public/hero-image.svg') center no-repeat;
+  background: url('../public/hero-images.webp') center no-repeat,
+    url('../public/hero-image.jpg') center no-repeat;
   background-size: cover;
   width: 100%;
   color: $white;
@@ -555,10 +554,6 @@ footer {
   padding: 24px 0;
 }
 
-.padding {
-  padding: 0 12px;
-}
-
 .text-center {
   text-align: center;
   color: $white;
@@ -577,8 +572,6 @@ footer {
 
   header {
     nav {
-      justify-content: flex-end;
-
       .hamburger {
         display: none;
       }

@@ -8,10 +8,10 @@ class TestimonialCard extends HTMLElement {
 			<p>${testimonial.text}</p>
 
 			<section class="testimonials__card__user">
-				<img
-					src="${testimonial.picture}"
-					alt="${testimonial.name}"
-				/>
+				<picture>
+					<source type="image/webp" srcset="${testimonial.picture2}" loading="lazy" />
+					<img src="${testimonial.picture}" alt="${testimonial.name}" loading="lazy" />
+				</picture>
 				<section>
 					<p>${testimonial.name}</p>
 					<p>${testimonial.title}</p>

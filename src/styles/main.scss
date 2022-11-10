@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&family=Inter:wght@300;400;500;600;700&display=swap');
-
 $bgPrimary: #18181b;
 $bgCard: #202024;
-$primary: #b67700;
-$primaryHover: #a66d00;
+$primary: #e69603;
+$primaryHover: #d88e04;
 $white: #e6e6e6;
 $dimWhite: #999999;
 $borderColor: #2d2d33;
@@ -26,6 +24,11 @@ header {
 
   .header__logo {
     display: flex;
+
+    img {
+      width: 44px;
+      height: 44px;
+    }
   }
 
   nav {
@@ -90,17 +93,33 @@ header {
   }
 }
 
+.mb {
+  margin-bottom: 54px;
+}
+
+.restaurant-skeleton {
+  height: 483px;
+  background-color: $bgCard;
+  border-radius: 4px;
+}
+
+.testimonial-skeleton {
+  height: 199px;
+  background-color: $bgCard;
+  border-radius: 4px;
+}
+
 .skip__link {
   position: absolute;
   top: -52px;
   left: 4px;
   background-color: $primary;
-  color: $white;
+  color: $bgPrimary;
   padding: 16px 20px;
-  transition: all 0.3s ease;
   border-radius: 4px;
   text-underline-offset: 2px;
   z-index: 100;
+  font-weight: bold;
 }
 
 .skip__link:focus {
@@ -113,7 +132,7 @@ header {
 }
 
 .hero {
-  background: url('../public/hero-image.jpg') center no-repeat;
+  background: url('../public/hero-image.svg') center no-repeat;
   background-size: cover;
   width: 100%;
   color: $white;
@@ -208,6 +227,12 @@ header {
         section {
           display: flex;
           gap: 4px;
+          align-items: center;
+
+          img {
+            width: 15px;
+            height: 15px;
+          }
 
           p {
             font-size: 14px;
@@ -250,6 +275,11 @@ header {
           width: fit-content;
           padding: 14px 0;
           margin-top: 12px;
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
 
           p {
             line-height: 135%;
@@ -315,6 +345,7 @@ header {
         display: flex;
         gap: 12px;
 
+        picture,
         img {
           width: 44px;
           height: 44px;
@@ -337,7 +368,7 @@ header {
   }
 }
 
-#detail {
+.detail {
   max-width: 600px;
   margin: auto;
   padding: 0 12px;
@@ -457,6 +488,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding-bottom: 54px;
 
     #review-container {
       display: flex;
@@ -562,7 +594,7 @@ footer {
     }
   }
 
-  #detail {
+  .detail {
     .header {
       padding: 8px 20px 12px 20px;
     }
@@ -598,13 +630,6 @@ footer {
 }
 
 @media (min-width: 900px) {
-  .restaurant #restaurant-list,
-  .testimonials #testimonial-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1000px) {
   .restaurant #restaurant-list,
   .testimonials #testimonial-list {
     grid-template-columns: repeat(3, 1fr);

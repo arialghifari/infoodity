@@ -4,19 +4,22 @@
       "name": "Karin Novilduh",
       "title": "#1 Customer",
       "text": "I start to experiencing some amazing food and restaurant with this app",
-      "picture": "https://randomuser.me/api/portraits/women/63.jpg"
+      "picture": "user-1.jpg",
+      "picture2": "user-1.webp"
     },
     {
       "name": "Rocky Gerind",
       "title": "Food Enthusiast",
       "text": "I like to try new food and this platform can easily recommended something awesome",
-      "picture": "https://randomuser.me/api/portraits/men/72.jpg"
+      "picture": "user-2.jpg",
+      "picture2": "user-2.webp"
     },
     {
       "name": "Jessica June",
       "title": "Honest Food Reviewer",
       "text": "I give my honest review when it comes to food and this app give me some of the best recommendation",
-      "picture": "https://randomuser.me/api/portraits/women/17.jpg"
+      "picture": "user-3.jpg",
+      "picture2": "user-3.webp"
     }
   ]
 }

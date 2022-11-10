@@ -4,7 +4,7 @@ import UrlParser from '../../routes/url-parser';
 const Search = {
   async render() {
     return `
-      <section class="restaurant">
+      <section class="restaurant mb">
         <div id="restaurant-list">
           <p>Loading...</p>
         </div>

@@ -8,16 +8,16 @@ import '../../component/review-card';
 const Detail = {
   async render() {
     return `
-      <div id="detail">
+      <section class="detail mb">
         <p class="text-center">Loading...</p>
-      </div>
+      </section>
     `;
   },
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
 
-    const detailContainer = document.getElementById('detail');
+    const detailContainer = document.querySelector('.detail');
     const { error, message, restaurant } =
       await InfooditySource.detailRestaurant(url.id);
 

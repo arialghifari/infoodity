@@ -3,7 +3,7 @@ import FavoriteMovieIdb from '../../data/favorite-restaurant-idb';
 const Favorite = {
   async render() {
     return `
-      <section class="restaurant">
+      <section class="restaurant mb">
         <div id="restaurant-list">
           <p>Loading...</p>
         </div>

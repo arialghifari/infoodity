@@ -10,6 +10,7 @@ class DetailCard extends HTMLElement {
 			<img
 				src="${CONFIG.BASE_IMAGE_URL}/${restaurant.pictureId}"
 				alt="${restaurant.name}"
+				loading="lazy"
 			/>
 
 			<div class="header">

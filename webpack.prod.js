@@ -2,6 +2,7 @@ const path = require('path');
 const { merge } = require('webpack-merge');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const common = require('./webpack.common');
 
 module.exports = merge(common, {
@@ -23,6 +24,10 @@ module.exports = merge(common, {
       },
     ],
   },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
   plugins: [
     new WorkboxWebpackPlugin.InjectManifest({
       swSrc: path.resolve(__dirname, 'src/scripts/sw.js'),
@@ -33,7 +38,7 @@ module.exports = merge(common, {
         {
           test: /\.(jpe?g|png)/,
           options: {
-            quality: 50,
+            quality: 40,
           },
         },
       ],

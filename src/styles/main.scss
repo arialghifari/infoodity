@@ -21,70 +21,68 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  .header__logo {
-    display: flex;
+.header__logo {
+  display: flex;
 
-    img {
-      width: 44px;
-      height: 44px;
+  img {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.hamburger {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: $white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+}
+
+.drawer {
+  position: absolute;
+  right: 0;
+  top: 76px;
+  background-color: $bgPrimary;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  padding-bottom: 12px;
+  display: none;
+  height: fit-content;
+
+  a {
+    color: $white;
+    text-decoration: none;
+    padding: 16px;
+    display: block;
+
+    &:hover {
+      color: $primary;
     }
   }
 
-  nav {
-    .hamburger {
-      font-size: 1rem;
-      text-decoration: none;
-      color: $white;
+  form {
+    padding: 0 12px;
+
+    input {
+      padding: 14px 12px;
       background-color: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 16px;
-    }
-
-    .drawer {
-      position: absolute;
-      right: 0;
-      top: 76px;
-      background-color: $bgPrimary;
-      width: 100%;
-      text-align: center;
+      border: 1px solid $dimWhite;
       border-radius: 4px;
-      padding-bottom: 12px;
-      display: none;
-      height: fit-content;
-
-      a {
-        color: $white;
-        text-decoration: none;
-        padding: 16px;
-        display: block;
-
-        &:hover {
-          color: $primary;
-        }
-      }
-
-      form {
-        padding: 0 12px;
-
-        input {
-          padding: 14px 12px;
-          background-color: transparent;
-          border: 1px solid $dimWhite;
-          border-radius: 4px;
-          color: $white;
-          font-size: 1rem;
-        }
-      }
-    }
-
-    .open {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      color: $white;
+      font-size: 1rem;
     }
   }
+}
+
+.open {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .padding {
@@ -140,231 +138,231 @@ header {
   color: $white;
   margin: auto;
   padding: 60px 12px;
+}
 
-  .hero__wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
+.hero__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
 
-    .hero__logo {
-      color: $primary;
-      letter-spacing: 4px;
-      font-weight: 500;
-      font-size: 16px;
-    }
+.hero__logo {
+  color: $primary;
+  letter-spacing: 4px;
+  font-weight: 500;
+  font-size: 16px;
+}
 
-    .hero__title {
-      font-weight: 500;
-      font-size: 42px;
-      margin-top: 28px;
-    }
+.hero__title {
+  font-weight: 500;
+  font-size: 42px;
+  margin-top: 28px;
+}
 
-    .hero__subtitle {
-      color: $dimWhite;
-      font-size: 18px;
-      line-height: 155%;
-      margin-top: 12px;
-    }
+.hero__subtitle {
+  color: $dimWhite;
+  font-size: 18px;
+  line-height: 155%;
+  margin-top: 12px;
+}
 
-    .hero__button {
-      font-size: 16px;
-      width: fit-content;
-      padding: 16px 20px;
-      cursor: pointer;
-      border-radius: 4px;
-      background-color: $primary;
-      border: none;
-      margin-top: 32px;
-      font-weight: 500;
-      color: #000;
-      text-decoration: none;
+.hero__button {
+  font-size: 16px;
+  width: fit-content;
+  padding: 16px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: $primary;
+  border: none;
+  margin-top: 32px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
 
-      &:hover {
-        background-color: $primaryHover;
-      }
-    }
+  &:hover {
+    background-color: $primaryHover;
   }
 }
 
 .restaurant {
   color: $white;
   padding: 0 12px;
+}
 
-  #restaurant__title {
-    margin-top: 52px;
-    font-weight: 500;
+#restaurant__title {
+  margin-top: 52px;
+  font-weight: 500;
+}
+
+.restaurant__subtitle {
+  color: $dimWhite;
+  margin-top: 8px;
+}
+
+#restaurant-list {
+  margin: 32px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 28px;
+}
+
+restaurant-card {
+  background-color: $bgCard;
+  border-radius: 4px;
+  height: 100%;
+
+  & > img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px 4px 0 0;
   }
+}
 
-  .restaurant__subtitle {
-    color: $dimWhite;
-    margin-top: 8px;
-  }
+.restaurant__card__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 2px solid $borderColor;
 
-  #restaurant-list {
-    margin: 32px 0 0 0;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 28px;
+  section {
+    display: flex;
+    gap: 4px;
+    align-items: center;
 
-    restaurant-card {
-      background-color: $bgCard;
-      border-radius: 4px;
-      height: 100%;
-
-      & > img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 4px 4px 0 0;
-      }
-
-      .restaurant__card__info {
-        display: flex;
-        justify-content: space-between;
-        padding: 12px 20px;
-        border-bottom: 2px solid $borderColor;
-
-        section {
-          display: flex;
-          gap: 4px;
-          align-items: center;
-
-          img {
-            width: 15px;
-            height: 15px;
-          }
-
-          p {
-            font-size: 14px;
-            color: $dimWhite;
-          }
-        }
-      }
-
-      .restaurant__card__body {
-        padding: 24px 20px 16px 20px;
-        position: relative;
-
-        & > section {
-          h3 {
-            line-height: 145%;
-          }
-
-          & > p {
-            font-weight: 300;
-            line-height: 155%;
-            font-size: 14px;
-            padding-top: 20px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            line-clamp: 4;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;
-          }
-        }
-
-        & > a {
-          display: flex;
-          align-items: center;
-          background-color: transparent;
-          border: none;
-          color: $primary;
-          cursor: pointer;
-          text-decoration: none;
-          width: fit-content;
-          padding: 14px 0;
-          margin-top: 12px;
-
-          img {
-            width: 20px;
-            height: 20px;
-          }
-
-          p {
-            line-height: 135%;
-            font-size: 16px;
-          }
-
-          &:hover {
-            color: $primaryHover;
-          }
-        }
-      }
+    img {
+      width: 15px;
+      height: 15px;
     }
+
+    p {
+      font-size: 14px;
+      color: $dimWhite;
+    }
+  }
+}
+
+.restaurant__card__body {
+  padding: 24px 20px 16px 20px;
+  position: relative;
+}
+
+.restaurant__card__body__section {
+  h3 {
+    line-height: 145%;
+  }
+
+  & > p {
+    font-weight: 300;
+    line-height: 155%;
+    font-size: 14px;
+    padding-top: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.restaurant__card__body__link {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: $primary;
+  cursor: pointer;
+  text-decoration: none;
+  width: fit-content;
+  padding: 14px 0;
+  margin-top: 12px;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  p {
+    line-height: 135%;
+    font-size: 16px;
+  }
+
+  &:hover {
+    color: $primaryHover;
   }
 }
 
 .testimonials {
   color: $white;
   padding: 0 12px;
+}
 
-  .testimonials__title {
-    margin-top: 52px;
-    font-weight: 500;
+.testimonials__title {
+  margin-top: 52px;
+  font-weight: 500;
+}
+
+.testimonials__subtitle {
+  color: $dimWhite;
+  margin-top: 8px;
+}
+
+#testimonial-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 28px;
+  margin: 32px 0;
+}
+
+testimonial-card {
+  background-color: $bgCard;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+
+  & > p {
+    line-height: 135%;
+    isolation: isolate;
+    position: relative;
+
+    &::before {
+      content: '"';
+      font-size: 80px;
+      color: $bgPrimary;
+      position: absolute;
+      z-index: -1;
+      right: -16px;
+      top: 20px;
+    }
+  }
+}
+
+.testimonials__card__user {
+  display: flex;
+  gap: 12px;
+
+  picture,
+  img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
   }
 
-  .testimonials__subtitle {
-    color: $dimWhite;
-    margin-top: 8px;
-  }
+  section {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
 
-  #testimonial-list {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 28px;
-    margin: 32px 0;
-
-    testimonial-card {
-      background-color: $bgCard;
-      border-radius: 4px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 28px;
-
-      & > p {
-        line-height: 135%;
-        isolation: isolate;
-        position: relative;
-
-        &::before {
-          content: '"';
-          font-size: 80px;
-          color: $bgPrimary;
-          position: absolute;
-          z-index: -1;
-          right: -16px;
-          top: 20px;
-        }
-      }
-
-      .testimonials__card__user {
-        display: flex;
-        gap: 12px;
-
-        picture,
-        img {
-          width: 44px;
-          height: 44px;
-          border-radius: 50%;
-        }
-
-        section {
-          font-size: 14px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          gap: 4px;
-
-          p:last-child {
-            color: $dimWhite;
-          }
-        }
-      }
+    p:last-child {
+      color: $dimWhite;
     }
   }
 }
@@ -410,142 +408,142 @@ header {
     color: $dimWhite;
   }
 
-  .info {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 16px;
-    color: $dimWhite;
-    flex-direction: column;
-
-    & > div {
-      display: flex;
-      gap: 4px;
-      font-size: 0.9rem;
-    }
-  }
-
-  .description {
-    color: $white;
-    line-height: 1.6rem;
-  }
-
   hr {
     border: none;
     border-bottom: 1px solid $primaryHover;
     margin: 20px 0;
   }
+}
 
-  .categories {
-    color: $dimWhite;
+.info {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: $dimWhite;
+  flex-direction: column;
+
+  & > div {
     display: flex;
-    flex-direction: column;
-    margin: 0 0 12px 0;
     gap: 4px;
+    font-size: 0.9rem;
+  }
+}
 
-    p {
-      font-size: 0.9rem;
-      border: 1px solid $dimWhite;
-      padding: 4px 12px;
-      border-radius: 4px;
-      width: fit-content;
+.description {
+  color: $white;
+  line-height: 1.6rem;
+}
+
+.categories {
+  color: $dimWhite;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 12px 0;
+  gap: 4px;
+
+  p {
+    font-size: 0.9rem;
+    border: 1px solid $dimWhite;
+    padding: 4px 12px;
+    border-radius: 4px;
+    width: fit-content;
+  }
+}
+
+.foods-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 20px 0;
+}
+
+.foods {
+  color: $white;
+  margin-bottom: 20px;
+
+  p {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-bottom: 4px;
     }
   }
 
-  .foods-container {
-    display: grid;
-    grid-template-columns: 1fr;
+  ul.food li:before {
+    content: '🍴';
+    margin-right: 8px;
+  }
+
+  ul.drink li:before {
+    content: '🥛';
+    margin-right: 8px;
+  }
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 54px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     margin: 20px 0;
 
-    .foods {
+    input,
+    textarea {
+      background-color: transparent;
+      border: 1px solid $dimWhite;
+      font-size: 1rem;
+      padding: 14px;
       color: $white;
-      margin-bottom: 20px;
+      border-radius: 4px;
+    }
 
-      p {
-        font-weight: bold;
-        margin-bottom: 8px;
-      }
+    button {
+      font-size: 0.9rem;
+      background-color: $primary;
+      color: #000;
+      padding: 16px 0;
+      border-radius: 4px;
+      font-weight: 500;
 
-      ul {
-        list-style: none;
-
-        li {
-          margin-bottom: 4px;
-        }
-      }
-
-      ul.food li:before {
-        content: '🍴';
-        margin-right: 8px;
-      }
-
-      ul.drink li:before {
-        content: '🥛';
-        margin-right: 8px;
+      &:hover {
+        background-color: $primaryHover;
       }
     }
   }
+}
 
-  .reviews {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding-bottom: 54px;
+#review-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
-    #review-container {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+.review {
+  color: $white;
+  background-color: $bgCard;
+  padding: 12px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
 
-      .review {
-        color: $white;
-        background-color: $bgCard;
-        padding: 12px;
-        border-radius: 4px;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        overflow-y: auto;
+  .name {
+    font-weight: bold;
+  }
 
-        .name {
-          font-weight: bold;
-        }
-
-        .date {
-          color: $dimWhite;
-          font-size: 0.9rem;
-        }
-      }
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin: 20px 0;
-
-      input,
-      textarea {
-        background-color: transparent;
-        border: 1px solid $dimWhite;
-        font-size: 1rem;
-        padding: 14px;
-        color: $white;
-        border-radius: 4px;
-      }
-
-      button {
-        font-size: 0.9rem;
-        background-color: $primary;
-        color: #000;
-        padding: 16px 0;
-        border-radius: 4px;
-        font-weight: 500;
-
-        &:hover {
-          background-color: $primaryHover;
-        }
-      }
-    }
+  .date {
+    color: $dimWhite;
+    font-size: 0.9rem;
   }
 }
 
@@ -567,66 +565,62 @@ footer {
 }
 
 @media (min-width: 600px) {
-  .restaurant #restaurant-list,
-  .testimonials #testimonial-list {
+  #restaurant-list,
+  #testimonial-list {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  header {
-    nav {
-      .hamburger {
-        display: none;
-      }
+  nav {
+    .hamburger {
+      display: none;
+    }
 
-      .drawer {
-        position: initial;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 0;
-        transform: translateX(0);
-      }
+    .drawer {
+      position: initial;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0;
+      transform: translateX(0);
     }
   }
 
-  .detail {
-    .header {
-      padding: 8px 20px 12px 20px;
-    }
+  .header {
+    padding: 8px 20px 12px 20px;
+  }
 
-    .info {
-      padding: 0 20px;
-      gap: 20px;
-      flex-direction: row;
-    }
+  .info {
+    padding: 0 20px;
+    gap: 20px;
+    flex-direction: row;
+  }
 
-    .description {
-      padding: 0 20px;
-    }
+  .description {
+    padding: 0 20px;
+  }
 
-    hr {
-      margin: 20px;
-    }
+  hr {
+    margin: 20px;
+  }
 
-    .categories {
-      flex-direction: row;
-      margin: 0 20px 12px 20px;
-    }
+  .categories {
+    flex-direction: row;
+    margin: 0 20px 12px 20px;
+  }
 
-    .foods-container {
-      grid-template-columns: repeat(2, 1fr);
-      margin: 20px 20px;
-    }
+  .foods-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px 20px;
+  }
 
-    .reviews {
-      margin: 0 20px;
-    }
+  .reviews {
+    margin: 0 20px;
   }
 }
 
 @media (min-width: 900px) {
-  .restaurant #restaurant-list,
-  .testimonials #testimonial-list {
+  #restaurant-list,
+  #testimonial-list {
     grid-template-columns: repeat(3, 1fr);
   }
 }

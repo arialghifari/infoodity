@@ -23,11 +23,11 @@ class RestaurantCard extends HTMLElement {
 			</section>
 
 			<section class="restaurant__card__body">
-				<section>
+				<section class="restaurant__card__body__section">
 					<h3>${restaurant.name}</h3>
 					<p>${restaurant.description}...</p>
 				</section>
-				<a href="/#/detail/${restaurant.id}" aria-label="View Detail ${restaurant.name}">
+				<a class="restaurant__card__body__link" href="/#/detail/${restaurant.id}" aria-label="View Detail ${restaurant.name}">
 					<p>View Detail</p>
 				</a>
 			</section>

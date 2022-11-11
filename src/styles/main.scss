@@ -10,7 +10,7 @@ $borderColor: #2d2d33;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Verdana', 'Trebuchet MS', sans-serif;
+  font-family: "Verdana", "Trebuchet MS", sans-serif;
 }
 
 body {
@@ -132,7 +132,7 @@ header {
 }
 
 .hero {
-  background: url('../public/hero-image.svg') center no-repeat;
+  background: url("../public/hero-image.svg") center no-repeat;
   background-size: cover;
   width: 100%;
   color: $white;
@@ -384,6 +384,7 @@ testimonial-card {
     font-weight: bold;
     color: $white;
     font-size: 1.2rem;
+    padding-left: 20px;
   }
 
   .header {
@@ -401,11 +402,7 @@ testimonial-card {
     font-size: 1.4rem;
     color: $white;
     transition: ease-in-out 0.1s;
-    padding: 14px;
-  }
-
-  button:hover {
-    color: $dimWhite;
+    padding: 14px 20px;
   }
 
   hr {
@@ -474,12 +471,12 @@ testimonial-card {
   }
 
   ul.food li:before {
-    content: '🍴';
+    content: "🍴";
     margin-right: 8px;
   }
 
   ul.drink li:before {
-    content: '🥛';
+    content: "🥛";
     margin-right: 8px;
   }
 }

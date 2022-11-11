@@ -15,12 +15,10 @@ class RestaurantCard extends HTMLElement {
 
 			<section class="restaurant__card__info">
 				<section>
-					<img src="./ic-map-pin.svg" alt="Map pin icon" />
-					<p>${restaurant.city}</p>
+					<span class="text-small">📍</span> <p>${restaurant.city}</p>
 				</section>
 				<section>
-					<img src="./ic-star.svg" alt="Star icon" />
-					<p>${restaurant.rating}</p>
+					<span class="text-small">⭐</span> <p>${restaurant.rating}</p>
 				</section>
 			</section>
 
@@ -31,7 +29,6 @@ class RestaurantCard extends HTMLElement {
 				</section>
 				<a href="/#/detail/${restaurant.id}" aria-label="View Detail ${restaurant.name}">
 					<p>View Detail</p>
-					<img src="./ic-arrow-up-right.svg" alt="Arrow icon" />
 				</a>
 			</section>
 		`;

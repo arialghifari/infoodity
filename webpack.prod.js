@@ -1,6 +1,6 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
-const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const { InjectManifest } = require('workbox-webpack-plugin');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const common = require('./webpack.common');
@@ -27,9 +27,31 @@ module.exports = merge(common, {
   optimization: {
     minimize: true,
     minimizer: [new TerserPlugin()],
+    splitChunks: {
+      chunks: 'all',
+      minSize: 20000,
+      maxSize: 70000,
+      minRemainingSize: 0,
+      minChunks: 1,
+      maxAsyncRequests: 30,
+      maxInitialRequests: 30,
+      enforceSizeThreshold: 50000,
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+          reuseExistingChunk: true,
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+      },
+    },
   },
   plugins: [
-    new WorkboxWebpackPlugin.InjectManifest({
+    new InjectManifest({
       swSrc: path.resolve(__dirname, 'src/scripts/sw.js'),
       swDest: './sw.bundle.js',
     }),

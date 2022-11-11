@@ -24,12 +24,10 @@ class DetailCard extends HTMLElement {
 
 			<div class="info">
 				<div>
-					<img src="./ic-map-pin.svg" alt="Map pin icon" />
-					<p>${restaurant.address}, ${restaurant.city}</p>
+					<span class="text-small">📍</span> <p>${restaurant.address}, ${restaurant.city}</p>
 				</div>
 				<div>
-					<img src="./ic-star.svg" alt="Star icon" />
-					<p>${restaurant.rating}</p>
+					<span class="text-small">⭐</span> <p>${restaurant.rating}</p>
 				</div>
 			</div>
 

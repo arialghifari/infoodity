@@ -1,7 +1,7 @@
 $bgPrimary: #18181b;
 $bgCard: #202024;
 $primary: #e69603;
-$primaryHover: #d88e04;
+$primaryHover: #c98404;
 $white: #e6e6e6;
 $dimWhite: #999999;
 $borderColor: #2d2d33;
@@ -89,6 +89,10 @@ header {
 
 .padding {
   padding: 20px 12px;
+}
+
+.text-small {
+  font-size: 0.8rem;
 }
 
 .mb {

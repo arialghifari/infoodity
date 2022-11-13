@@ -23,6 +23,11 @@ header {
   align-items: center;
 }
 
+nav {
+  width: auto;
+  height: auto;
+}
+
 .header__logo {
   display: flex;
 
@@ -127,6 +132,7 @@ header {
 }
 
 .hero {
+  background-image: url('../public/hero-image-small.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -612,6 +618,10 @@ footer {
 }
 
 @media (min-width: 900px) {
+  .hero {
+    background-image: url('../public/hero-image-large.webp');
+  }
+
   #restaurant-list,
   #testimonial-list {
     grid-template-columns: repeat(3, 1fr);

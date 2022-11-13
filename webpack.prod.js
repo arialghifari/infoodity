@@ -3,6 +3,7 @@ const { merge } = require('webpack-merge');
 const { InjectManifest } = require('workbox-webpack-plugin');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const common = require('./webpack.common');
 
 module.exports = merge(common, {
@@ -65,6 +66,9 @@ module.exports = merge(common, {
         },
       ],
       overrideExtension: true,
+    }),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'disabled',
     }),
   ],
 });

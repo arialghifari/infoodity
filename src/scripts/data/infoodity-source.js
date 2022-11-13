@@ -28,7 +28,6 @@ class InfooditySource {
       body: JSON.stringify(body),
     });
     const responseJson = await response.json();
-    console.log(responseJson);
     return responseJson;
   }
 }

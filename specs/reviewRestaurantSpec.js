@@ -91,7 +91,8 @@ describe('Review a Restaurant', () => {
     addFormInput('s1knt6za9kkfw1e867', nameInput, reviewInput);
 
     const date = new Date();
-    const localDateFormat = date.toLocaleDateString('en-GB', {
+    const dateFormat = date.toLocaleDateString('en-GB', {
+      timeZone: 'Asia/Jakarta',
       day: 'numeric',
       month: 'long',
       year: 'numeric',
@@ -107,7 +108,7 @@ describe('Review a Restaurant', () => {
     expect(response.customerReviews).toContain({
       name: nameInput,
       review: reviewInput,
-      date: localDateFormat,
+      date: dateFormat,
     });
   });
 });

@@ -1,1 +1,1 @@
-# Infoodity - Restaurant Apps
+# Infoodity - Restaurant App

@@ -8,7 +8,8 @@
     "build": "webpack --config webpack.prod.js",
     "serve": "http-server dist --port 9000",
     "build-serve": "npm run build && npm run serve",
-    "test": "karma start"
+    "test": "karma start",
+    "e2e": "codeceptjs run --steps"
   },
   "keywords": [],
   "author": "Ari Alghifari",
@@ -18,6 +19,7 @@
     "@babel/preset-env": "^7.19.4",
     "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
+    "codeceptjs": "^3.3.6",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
     "eslint": "^8.26.0",
@@ -35,6 +37,7 @@
     "karma-jasmine": "^4.0.2",
     "karma-sourcemap-loader": "^0.3.8",
     "karma-webpack": "^5.0.0",
+    "puppeteer": "^19.2.2",
     "sass": "^1.54.8",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",

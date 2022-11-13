@@ -86,7 +86,10 @@ describe('Review a Restaurant', () => {
   });
 
   it('should show my own review', async () => {
-    addFormInput('s1knt6za9kkfw1e867', 'Desta', 'Authentic taste!');
+    const nameInput = 'Joe';
+    const reviewInput = '10 out of 10, very tasty!';
+    addFormInput('s1knt6za9kkfw1e867', nameInput, reviewInput);
+
     const date = new Date();
     const localDateFormat = date.toLocaleDateString('en-GB', {
       day: 'numeric',
@@ -101,11 +104,9 @@ describe('Review a Restaurant', () => {
       review: document.querySelector('[name="review"]').value,
     });
 
-    console.log(response.customerReviews);
-
     expect(response.customerReviews).toContain({
-      name: 'Desta',
-      review: 'Authentic taste!',
+      name: nameInput,
+      review: reviewInput,
       date: localDateFormat,
     });
   });

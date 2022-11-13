@@ -6,7 +6,7 @@ import data from '../../../DATA.json';
 const Home = {
   async render() {
     return `
-      <section class="hero">
+      <section class="hero" style="background-image: url('/hero-image.webp'), url('/hero-image.jpg')">
         <section class="hero__wrapper container">
           <h1 class="hero__logo">INFOODITY</h1>
           <p class="hero__title">

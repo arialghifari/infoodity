@@ -7,29 +7,33 @@
     <meta name="description" content="Favorite restaurant listing app" />
     <meta name="theme-color" content="#18181B" />
 
-    <link fetchpriority="high" rel="manifest" href="./manifest.json" />
     <link
       fetchpriority="high"
       rel="preload"
-      href="./hero-image.svg"
+      href="./hero-image.webp"
       as="image"
     />
-    <link fetchpriority="high" rel="preload" href="./logo.svg" as="image" />
-
-    <link rel="icon" href="./logo.svg" />
-    <link rel="apple-touch-icon" href="./icons/icon-192x192.webp" />
+    <link
+      fetchpriority="high"
+      rel="preload"
+      href="./hero-image.jpg"
+      as="image"
+    />
+    <link fetchpriority="high" rel="manifest" href="./manifest.json" />
+    <link rel="icon" href="./logo.ico" />
+    <link rel="apple-touch-icon" href="./icons/icon-192x192.png" />
     <title>Infoodity — Your favorite restaurant list</title>
   </head>
   <body>
     <a href="#" tabindex="0" class="skip__link">Skip To Content</a>
 
-    <header class="padding container">
+    <header class="container" style="padding: 20px 0 20px 12px;">
       <a href="/#" class="header__logo">
-        <img src="./logo.svg" alt="Infoodity logo" />
+        <img src="./icons/icon-144x144.png" alt="Infoodity logo" width="44px" />
       </a>
 
       <nav>
-        <button class="hamburger" aria-label="Show menu">☰</button>
+        <button class="hamburger" aria-label="Show menu" style="padding: 12px;">☰</button>
 
         <section class="drawer">
           <form id="searchForm">

@@ -11,7 +11,7 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.(js)$/,
+        test: /\.js$/,
         exclude: /[\\/]node_modules[\\/]/,
         use: [
           {
@@ -29,7 +29,7 @@ module.exports = merge(common, {
     minimizer: [new TerserPlugin()],
     splitChunks: {
       chunks: 'all',
-      minSize: 20000,
+      minSize: 30000,
       maxSize: 70000,
       minRemainingSize: 0,
       minChunks: 1,

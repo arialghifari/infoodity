@@ -6,9 +6,11 @@ const ReviewInitiator = {
     await form?.addEventListener('submit', async (event) => {
       event.preventDefault();
       let [id, name, review] = event.target;
+
       id = id.value;
       name = name.value;
       review = review.value;
+      if (id === '' && name === '' && review === '') return;
 
       const { error, customerReviews } = await InfooditySource.addReview({
         id,

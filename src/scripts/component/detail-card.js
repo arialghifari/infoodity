@@ -59,9 +59,9 @@ class DetailCard extends HTMLElement {
 
 			<div class="reviews">
 				<form id="reviewForm">
-					<input type="hidden" name="id" value="${restaurant.id}" required />
-					<input type="text" name="name" placeholder="Name" required />
-					<textarea name="review" cols="10" rows="5" placeholder="Write review" required></textarea>
+					<input type="hidden" name="id" value="${restaurant.id}" />
+					<input type="text" name="name" placeholder="Name" />
+					<textarea name="review" cols="10" rows="5" placeholder="Write review"></textarea>
 					<button>COMMENT</button>
 				</form>
 

@@ -12,7 +12,6 @@
   },
   "rules": {
     "no-console": 0,
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "linebreak-style": ["error", "windows"],
     "eslint-env": 0,
     "no-underscore-dangle": 0,
@@ -26,6 +25,7 @@
     "consistent-return": 0,
     "no-prototype-builtins": 0,
     "import/prefer-default-export": 0,
+    "import/no-extraneous-dependencies": 0,
     "no-return-assign": 0
   }
 }

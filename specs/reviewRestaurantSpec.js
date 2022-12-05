@@ -91,7 +91,7 @@ describe('Review a Restaurant', () => {
     addFormInput('s1knt6za9kkfw1e867', nameInput, reviewInput);
 
     const date = new Date();
-    const dateFormat = date.toLocaleDateString('en-GB', {
+    const dateFormat = date.toLocaleDateString('ID', {
       timeZone: 'Asia/Jakarta',
       day: 'numeric',
       month: 'long',
